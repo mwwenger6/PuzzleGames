@@ -6,7 +6,6 @@ import {Home} from "./Home";
 import {Tower} from "./Towers/Tower";
 import WrappedPuzzle from "./SlidingPuzzle/WrappedPuzzle";
 
-
 function App() {
   return (
     <BrowserRouter>

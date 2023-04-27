@@ -1,8 +1,7 @@
 import { Tile } from './Tile';
-import { DndProvider } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
+import './puzzle.css'
+import {DragDropContext } from 'react-beautiful-dnd'
 import { PuzzleSquare } from './PuzzleSquare';
-import "./puzzle.css"
 import { useContext, useEffect } from "react";
 import { PuzzleContext } from "./PuzzleContext";
 
@@ -39,7 +38,7 @@ export const Puzzle = () => {
 
 
     return (
-        <DndProvider backend={HTML5Backend}>
+        <DragDropContext>
             <div id="tileContainer" class = "container">
                 <div id='allTiles' align="center">
                     <div class = "row">
@@ -68,7 +67,7 @@ export const Puzzle = () => {
                     </div>
                 </div>
             </div>
-        </DndProvider>
+        </DragDropContext>
     );
 }
 
